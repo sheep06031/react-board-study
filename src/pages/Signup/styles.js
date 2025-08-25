@@ -30,7 +30,7 @@ export const btnBox = css`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 10px; /* 아이콘-텍스트 간격 */
+		gap: 10px; 
 		width: 100%;
 		padding: 12px;
 		border-radius: 8px;

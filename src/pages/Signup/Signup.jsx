@@ -2,8 +2,11 @@
 import * as s from "./styles";
 import AuthInput from "../../components/AuthInput/AuthInput";
 import { useEffect, useState } from "react";
+import { signupRequest } from "../../apis/auth/authApis";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -25,8 +28,25 @@ function Signup() {
       alert("비밀번호가 일치하지 않습니다.");
       return;
     }
-
-    //회원가입 요청 API
+    signupRequest({
+      username: username,
+      password: password,
+      email: email,
+    })
+      .then((response) => {
+        if (response.data.status === "success") {
+          alert(response.data.message);
+          navigate("/auth/signin");
+        } else if (response.data.status === "failed") {
+          alert(response.data.message);
+          return;
+        }
+      })
+      .catch((error) => {
+        alert("문제가 발생했습니다. 다시 시도해주세요");
+        console.log(error.message)
+        return;
+      });
   };
 
   useEffect(() => {

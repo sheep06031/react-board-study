@@ -13,6 +13,4 @@ export const mainContainer = css`
     height: calc(100vh - 60px);
     min-height: 800px;
     box-sizing: border-box;
-    border-right: 1px solid #dbdbdb;
-    border-left: 1px solid #dbdbdb;
 `;

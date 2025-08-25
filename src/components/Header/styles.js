@@ -17,7 +17,7 @@ export const header = css`
 
     & > ul {
       display: flex;
-      justify-content: flex;
+      justify-content: center;
       align-items: center;
       gap: 20px;
       

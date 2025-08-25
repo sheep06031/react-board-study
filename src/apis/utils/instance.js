@@ -10,4 +10,14 @@
  * 
  * 요청/응다 가로채기 (Interceptors)
  * 모든 요청이 보내지기 전이나 모든 응답이 도착한 후에 중간 지점에서 공통 작업을 처리 할 수 있다.
+ * 예를 들어, 모든 요청에 토큰을 자동으로 추가하거나,
+ * 특정 에러코드가 오면 자동으로 로그인 페이지로 보내는 등의 처리를 할 수 있다.
  */
+
+import axios from "axios"
+
+export const instance = axios.create({
+    baseURL: "http://localhost:8080"
+})
+
+ 

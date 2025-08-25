@@ -47,7 +47,7 @@ export const oauthBtnBox = css`
 	flex-direction: column;
 	gap: 10px;
 
-	& > button {
+	& > a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -61,6 +61,7 @@ export const oauthBtnBox = css`
 		font-weight: 500;
 		color: #333;
 		cursor: pointer;
+		box-sizing: border-box;
 
 		/* ✅ background → background-color 로 변경 */
 		transition: background-color 0.2s ease, color 0.2s ease;
