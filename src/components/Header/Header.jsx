@@ -13,7 +13,6 @@ function Header() {
   const navigate = useNavigate();
   const onClickNavHandler = (path) => {
     navigate(path);
-    console.log(principalData);
   };
   const onClickLogout = () => {
     localStorage.removeItem("accessToken");

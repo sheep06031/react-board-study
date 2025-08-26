@@ -28,7 +28,25 @@ export const getPrincipalRequest = async () => {
     return config;
   });
   try {
-    const response = await instance.get("/auth/pricipal");
+    const response = await instance.get("/auth/principal");
+    return response;
+  } catch (error) {
+    return error.response;
+  }
+};
+
+export const oauth2SignupRequest = async (data) => {
+  try {
+    const response = await instance.post("/oauth2/signup", data);
+    return response;
+  } catch (error) {
+    return error.response;
+  }
+};
+
+export const oauth2MergeRequest = async (data) => {
+  try {
+    const response = await instance.post("/oauth2/merge", data);
     return response;
   } catch (error) {
     return error.response;

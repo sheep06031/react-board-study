@@ -17,11 +17,11 @@ function Board() {
     <div>
       <h2>Board List</h2>
       <ul>
-        {/* {boardList.map((board) => (
+        {boardList.map((board) => (
           <li key={board.boardId}>
             제목: {board.title}
           </li>
-        ))} */}
+        ))}
       </ul>
     </div>
   );
